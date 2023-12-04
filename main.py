@@ -19,3 +19,15 @@ parser.add_argument("-d", "--directory",
 # Parse the arguments
 args = parser.parse_args()
 
+# Store csv and output directory in corresponding variables
+path_csv = Path(args.filepath)
+path_out = Path(args.directory)
+
+# Exit if csv does not exist
+if not path_csv.is_file():
+    raise FileNotFoundError(str(path_csv) + " is not a file or doesn't exist")
+
+# Exit if output directory does not exist
+if not path_out.is_dir():
+    raise NotADirectoryError(str(path_out) + " is not a directory or doesn't exist")
+
