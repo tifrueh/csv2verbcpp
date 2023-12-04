@@ -12,3 +12,5 @@ text
 ~~~
 
 All the other rows should contain all the forms of a verb, beginning with the `Identifier`, continuing with the `Infinitif`, the `Participe présent`, etc.
+
+See [template.csv](https://github.com/tifrueh/csv2verbcpp/blob/main/template.csv) for an example.
