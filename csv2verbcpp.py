@@ -88,7 +88,7 @@ verbs_list = []
 # Create parser object
 parser = argparse.ArgumentParser(
         prog="csv2verbcpp",
-        description="Convert a csv to .verb.cpp files for Conjugateur",
+        description="Create .verb.cpp files from a CSV file",
 )
 
 # Add parser arguments
