@@ -4,16 +4,19 @@ from pathlib import Path
 
 # Function which returns the file contents for a specific verb
 def get_out_str(verb):
-    return f"""// Copyright (C) 2023 Timo Früh
+    return f"""// Copyright (C) 2023-2024 Timo Früh
 // The full copyright notice can be found in ../main.cpp
 
 #include "verb.db.hpp"
 
 const verbDB::Verb verbDB::{verb["Identifier"]} = {{
 
+    L"{verb["Label"]},
+
     verbDB::VerbType::{verb["Type"]},
 
     L"{verb["Infinitif"]}",
+    L"{verb["Translation"]}",
     L"{verb["Participe présent"]}",
 
     L"{verb["Présent - je"]}",
