@@ -11,7 +11,7 @@ def get_out_str(verb):
 
 const verbDB::Verb verbDB::{verb["Identifier"]} = {{
 
-    L"{verb["Label"]},
+    L"{verb["Label"]}",
 
     verbDB::VerbType::{verb["Type"]},
 
