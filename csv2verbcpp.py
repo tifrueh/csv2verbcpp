@@ -83,7 +83,6 @@ const verbDB::Verb verbDB::{verb["Identifier"]} = {{
         L"{verb["Conditionnel - ils"]}",
         L"{verb["Conditionnel - elles"]}"
     }}
-
 }};
 """
 
