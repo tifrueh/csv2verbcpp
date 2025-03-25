@@ -6,6 +6,7 @@ from pathlib import Path
 
 fieldnames = [
         "Identifier",
+        "Label",
         "Translation",
         "Infinitif",
         "Participe Présent",
@@ -70,8 +71,11 @@ fieldnames = [
 def get_row(file_str):
     start = 0
     end = len(file_str)
+    identifier_start = file_str.index("const verbDB::Verb verbDB::") + 27
+    identifier_end = file_str.index(" =", identifier_start, len(file_str))
     row_dict = {}
-    for i in range(0, len(fieldnames)):
+    row_dict[fieldnames[0]] = file_str[identifier_start:identifier_end]
+    for i in range(1, len(fieldnames)):
         start = file_str.index("L\"", start, end) + 2
         end = file_str.index("\"", start, end)
         row_dict[fieldnames[i]] = file_str[start:end]
