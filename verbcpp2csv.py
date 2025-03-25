@@ -9,7 +9,7 @@ fieldnames = [
         "Label",
         "Translation",
         "Infinitif",
-        "Participe Présent",
+        "Participe présent",
         "Présent - je",
         "Présent - tu",
         "Présent - il",
