@@ -97,11 +97,11 @@ parser = argparse.ArgumentParser(
 )
 
 # Add parser arguments
-parser.add_argument("filepath", 
+parser.add_argument("filepath",
                     help="Path to the csv file"
 )
 
-parser.add_argument("-d", "--directory", 
+parser.add_argument("-d", "--directory",
                     help="Directory to put the .verb.cpp files in [default: .]"
 )
 
