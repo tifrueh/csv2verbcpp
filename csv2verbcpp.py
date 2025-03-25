@@ -130,5 +130,5 @@ with open(path_csv, newline="") as csvfile:
 # Create and populate all verb files
 for verb in verbs_list:
     out_str = ""
-    with open(path_out / f"{verb['Identifier']}.verb.cpp", "x") as outfile:
+    with open(path_out / f"{verb['Identifier']}.verb.cpp", "w") as outfile:
         outfile.write(get_out_str(verb))
