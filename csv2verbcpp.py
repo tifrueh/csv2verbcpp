@@ -6,7 +6,7 @@ from pathlib import Path
 
 # Function which returns the file contents for a specific verb
 def get_out_str(verb):
-    return f"""// Copyright (C) 2023-2024 Timo Früh
+    return f"""// Copyright (C) 2023-2025 Timo Früh
 // The full copyright notice can be found in ../main.cpp
 
 #include "verb.db.hpp"
@@ -14,75 +14,75 @@ def get_out_str(verb):
 const verbDB::Verb verbDB::{verb["Identifier"]} = {{
 
     L"{verb["Label"]}",
-
-    verbDB::VerbType::{verb["Type"]},
-
-    L"{verb["Infinitif"]}",
     L"{verb["Translation"]}",
-    L"{verb["Participe présent"]}",
 
-    L"{verb["Présent - je"]}",
-    L"{verb["Présent - tu"]}",
-    L"{verb["Présent - il"]}",
-    L"{verb["Présent - elle"]}",
-    L"{verb["Présent - nous"]}",
-    L"{verb["Présent - vous"]}",
-    L"{verb["Présent - ils"]}",
-    L"{verb["Présent - elles"]}",
+    {{
+        L"{verb["Infinitif"]}",
+        L"{verb["Participe présent"]}",
 
-    L"{verb["Imparfait - je"]}",
-    L"{verb["Imparfait - tu"]}",
-    L"{verb["Imparfait - il"]}",
-    L"{verb["Imparfait - elle"]}",
-    L"{verb["Imparfait - nous"]}",
-    L"{verb["Imparfait - vous"]}",
-    L"{verb["Imparfait - ils"]}",
-    L"{verb["Imparfait - elles"]}",
+        L"{verb["Présent - je"]}",
+        L"{verb["Présent - tu"]}",
+        L"{verb["Présent - il"]}",
+        L"{verb["Présent - elle"]}",
+        L"{verb["Présent - nous"]}",
+        L"{verb["Présent - vous"]}",
+        L"{verb["Présent - ils"]}",
+        L"{verb["Présent - elles"]}",
 
-    L"{verb["Futur - je"]}",
-    L"{verb["Futur - tu"]}",
-    L"{verb["Futur - il"]}",
-    L"{verb["Futur - elle"]}",
-    L"{verb["Futur - nous"]}",
-    L"{verb["Futur - vous"]}",
-    L"{verb["Futur - ils"]}",
-    L"{verb["Futur - elles"]}",
+        L"{verb["Imparfait - je"]}",
+        L"{verb["Imparfait - tu"]}",
+        L"{verb["Imparfait - il"]}",
+        L"{verb["Imparfait - elle"]}",
+        L"{verb["Imparfait - nous"]}",
+        L"{verb["Imparfait - vous"]}",
+        L"{verb["Imparfait - ils"]}",
+        L"{verb["Imparfait - elles"]}",
 
-    L"{verb["Passé composé - je"]}",
-    L"{verb["Passé composé - tu"]}",
-    L"{verb["Passé composé - il"]}",
-    L"{verb["Passé composé - elle"]}",
-    L"{verb["Passé composé - nous"]}",
-    L"{verb["Passé composé - vous"]}",
-    L"{verb["Passé composé - ils"]}",
-    L"{verb["Passé composé - elles"]}",
+        L"{verb["Futur - je"]}",
+        L"{verb["Futur - tu"]}",
+        L"{verb["Futur - il"]}",
+        L"{verb["Futur - elle"]}",
+        L"{verb["Futur - nous"]}",
+        L"{verb["Futur - vous"]}",
+        L"{verb["Futur - ils"]}",
+        L"{verb["Futur - elles"]}",
 
-    L"{verb["Plus-que-parfait - je"]}",
-    L"{verb["Plus-que-parfait - tu"]}",
-    L"{verb["Plus-que-parfait - il"]}",
-    L"{verb["Plus-que-parfait - elle"]}",
-    L"{verb["Plus-que-parfait - nous"]}",
-    L"{verb["Plus-que-parfait - vous"]}",
-    L"{verb["Plus-que-parfait - ils"]}",
-    L"{verb["Plus-que-parfait - elles"]}",
+        L"{verb["Passé composé - je"]}",
+        L"{verb["Passé composé - tu"]}",
+        L"{verb["Passé composé - il"]}",
+        L"{verb["Passé composé - elle"]}",
+        L"{verb["Passé composé - nous"]}",
+        L"{verb["Passé composé - vous"]}",
+        L"{verb["Passé composé - ils"]}",
+        L"{verb["Passé composé - elles"]}",
 
-    L"{verb["Subjonctif - je"]}",
-    L"{verb["Subjonctif - tu"]}",
-    L"{verb["Subjonctif - il"]}",
-    L"{verb["Subjonctif - elle"]}",
-    L"{verb["Subjonctif - nous"]}",
-    L"{verb["Subjonctif - vous"]}",
-    L"{verb["Subjonctif - ils"]}",
-    L"{verb["Subjonctif - elles"]}",
+        L"{verb["Plus-que-parfait - je"]}",
+        L"{verb["Plus-que-parfait - tu"]}",
+        L"{verb["Plus-que-parfait - il"]}",
+        L"{verb["Plus-que-parfait - elle"]}",
+        L"{verb["Plus-que-parfait - nous"]}",
+        L"{verb["Plus-que-parfait - vous"]}",
+        L"{verb["Plus-que-parfait - ils"]}",
+        L"{verb["Plus-que-parfait - elles"]}",
 
-    L"{verb["Conditionnel - je"]}",
-    L"{verb["Conditionnel - tu"]}",
-    L"{verb["Conditionnel - il"]}",
-    L"{verb["Conditionnel - elle"]}",
-    L"{verb["Conditionnel - nous"]}",
-    L"{verb["Conditionnel - vous"]}",
-    L"{verb["Conditionnel - ils"]}",
-    L"{verb["Conditionnel - elles"]}"
+        L"{verb["Subjonctif - je"]}",
+        L"{verb["Subjonctif - tu"]}",
+        L"{verb["Subjonctif - il"]}",
+        L"{verb["Subjonctif - elle"]}",
+        L"{verb["Subjonctif - nous"]}",
+        L"{verb["Subjonctif - vous"]}",
+        L"{verb["Subjonctif - ils"]}",
+        L"{verb["Subjonctif - elles"]}",
+
+        L"{verb["Conditionnel - je"]}",
+        L"{verb["Conditionnel - tu"]}",
+        L"{verb["Conditionnel - il"]}",
+        L"{verb["Conditionnel - elle"]}",
+        L"{verb["Conditionnel - nous"]}",
+        L"{verb["Conditionnel - vous"]}",
+        L"{verb["Conditionnel - ils"]}",
+        L"{verb["Conditionnel - elles"]}"
+    }}
 
 }};
 """
