@@ -116,6 +116,8 @@ with open(path_out, "w", newline="") as csvfile:
 
     writer.writeheader()
     for verb in path_dir.iterdir():
+        if verb.suffix != ".cpp": continue
+        print(f"reading {verb}")
         with open(verb, "r") as file:
             file_str = file.read()
             writer.writerow(get_row(file_str))
