@@ -102,7 +102,8 @@ parser.add_argument("filepath",
 )
 
 parser.add_argument("-d", "--directory",
-                    help="Directory to put the .verb.cpp files in [default: .]"
+                    help="Directory to put the .verb.cpp files in [default: .]",
+                    default="."
 )
 
 # Parse the arguments
